@@ -5,6 +5,14 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "About",
   description: siteConfig.description,
+  openGraph: {
+    title: `About · ${siteConfig.name}`,
+    description: siteConfig.description,
+  },
+  twitter: {
+    title: `About · ${siteConfig.name}`,
+    description: siteConfig.description,
+  },
 };
 
 const IS = [

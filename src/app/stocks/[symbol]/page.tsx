@@ -26,9 +26,18 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { symbol } = await params;
   const company = await getCompany(symbol);
   if (!company) return { title: "Company not found" };
+  const title = `${company.name} (${company.symbol})`;
   return {
-    title: `${company.name} (${company.symbol})`,
+    title,
     description: company.description,
+    openGraph: {
+      title: `${title} · ${siteConfig.name}`,
+      description: company.description,
+    },
+    twitter: {
+      title: `${title} · ${siteConfig.name}`,
+      description: company.description,
+    },
   };
 }
 

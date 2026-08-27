@@ -6,10 +6,20 @@ import { listCompanies, listFundamentalsSymbols } from "@/lib/data-provider";
 import { cn } from "@/lib/utils";
 import type { Company } from "@/types";
 
+const listDescription =
+  "Browse all 50 Nifty 50 companies, grouped by sector, with a plain-English description of what each one does.";
+
 export const metadata: Metadata = {
   title: "Companies",
-  description:
-    "Browse all 50 Nifty 50 companies, grouped by sector, with a plain-English description of what each one does.",
+  description: listDescription,
+  openGraph: {
+    title: "Companies · PlainMarket",
+    description: listDescription,
+  },
+  twitter: {
+    title: "Companies · PlainMarket",
+    description: listDescription,
+  },
 };
 
 /** Group companies by sector, sectors A–Z, companies by name within each. */
