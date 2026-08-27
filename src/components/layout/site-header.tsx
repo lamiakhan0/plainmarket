@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "./container";
+import { HeaderNav } from "./header-nav";
 
 export function SiteHeader() {
   return (
@@ -9,17 +10,7 @@ export function SiteHeader() {
         <Link href="/" className="text-lg font-semibold tracking-tight">
           {siteConfig.name}
         </Link>
-        <nav className="text-muted-foreground flex items-center gap-6 text-sm">
-          {siteConfig.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <HeaderNav items={siteConfig.nav} />
       </Container>
     </header>
   );
