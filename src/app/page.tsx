@@ -60,6 +60,15 @@ export default async function HomePage() {
             ))}
           </div>
         )}
+
+        <p className="text-muted-foreground mt-4 text-center text-sm">
+          <Link
+            href="/companies"
+            className="hover:text-foreground underline underline-offset-4 transition-colors"
+          >
+            Or browse all {companies.length} companies
+          </Link>
+        </p>
       </div>
 
       <div className="mx-auto mt-20 grid max-w-3xl gap-6 sm:grid-cols-3">
