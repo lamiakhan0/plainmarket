@@ -66,12 +66,24 @@ export default async function CompaniesPage() {
         </div>
       </header>
 
+      <nav aria-label="Jump to sector" className="mt-8 flex flex-wrap gap-2">
+        {sectors.map(([sector]) => (
+          <a
+            key={sector}
+            href={`#${sectorId(sector)}`}
+            className="border-border hover:border-primary hover:text-primary text-muted-foreground rounded-full border px-3 py-1 text-xs transition-colors"
+          >
+            {sector}
+          </a>
+        ))}
+      </nav>
+
       <div className="mt-10 space-y-10">
         {sectors.map(([sector, list]) => (
           <section key={sector} aria-labelledby={sectorId(sector)}>
             <h2
               id={sectorId(sector)}
-              className="border-border flex items-baseline justify-between border-b pb-2 text-sm font-semibold"
+              className="border-border flex scroll-mt-24 items-baseline justify-between border-b pb-2 text-sm font-semibold"
             >
               {sector}
               <span className="text-muted-foreground font-normal">
