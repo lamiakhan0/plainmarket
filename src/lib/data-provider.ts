@@ -1,0 +1,65 @@
+/**
+ * The single data-access layer for PlainMarket.
+ *
+ * Every page and component reads market data through these functions. They do
+ * NOT import `src/data/*` directly. Today these return mock fixtures; when we
+ * move to Postgres / Supabase / a market API, only this file changes.
+ *
+ * All functions are async on purpose — so swapping mock reads for real I/O
+ * later is invisible to callers.
+ */
+
+import type { Company, Fundamentals, GlossaryEntry, NewsItem } from "@/types";
+import { companies } from "@/data/companies";
+import { fundamentals } from "@/data/fundamentals";
+import { news } from "@/data/news";
+import { glossary } from "@/data/glossary";
+
+/** All tracked companies (Nifty 50 for the MVP). */
+export async function listCompanies(): Promise<Company[]> {
+  return companies;
+}
+
+/** Case-insensitive match on symbol or name. Empty query returns nothing. */
+export async function searchCompanies(query: string): Promise<Company[]> {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  return companies.filter(
+    (c) =>
+      c.symbol.toLowerCase().includes(q) || c.name.toLowerCase().includes(q),
+  );
+}
+
+/** A single company by ticker symbol, or null if not tracked. */
+export async function getCompany(symbol: string): Promise<Company | null> {
+  const s = symbol.toUpperCase();
+  return companies.find((c) => c.symbol.toUpperCase() === s) ?? null;
+}
+
+/** The financial snapshot for a company, or null if not available. */
+export async function getFundamentals(
+  symbol: string,
+): Promise<Fundamentals | null> {
+  const s = symbol.toUpperCase();
+  return fundamentals.find((f) => f.symbol.toUpperCase() === s) ?? null;
+}
+
+/** Recent news for a company, newest first. */
+export async function getCompanyNews(symbol: string): Promise<NewsItem[]> {
+  const s = symbol.toUpperCase();
+  return news
+    .filter((n) => n.symbol.toUpperCase() === s)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+}
+
+/** A glossary definition by id, or null. */
+export async function getGlossaryEntry(
+  id: string,
+): Promise<GlossaryEntry | null> {
+  return glossary.find((g) => g.id === id) ?? null;
+}
+
+/** The full glossary. */
+export async function listGlossary(): Promise<GlossaryEntry[]> {
+  return glossary;
+}
