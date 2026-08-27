@@ -14,20 +14,16 @@ import { companies } from "@/data/companies";
 import { fundamentals } from "@/data/fundamentals";
 import { news } from "@/data/news";
 import { glossary } from "@/data/glossary";
+import { rankCompanies } from "@/lib/search";
 
 /** All tracked companies (Nifty 50 for the MVP). */
 export async function listCompanies(): Promise<Company[]> {
   return companies;
 }
 
-/** Case-insensitive match on symbol or name. Empty query returns nothing. */
+/** Companies matching a query, best match first. Empty query returns nothing. */
 export async function searchCompanies(query: string): Promise<Company[]> {
-  const q = query.trim().toLowerCase();
-  if (!q) return [];
-  return companies.filter(
-    (c) =>
-      c.symbol.toLowerCase().includes(q) || c.name.toLowerCase().includes(q),
-  );
+  return rankCompanies(companies, query, companies.length);
 }
 
 /** A single company by ticker symbol, or null if not tracked. */
