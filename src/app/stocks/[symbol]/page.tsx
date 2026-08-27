@@ -5,8 +5,10 @@ import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { ThirtySecondBreakdown } from "@/components/stock/thirty-second-breakdown";
 import { MetricsGrid } from "@/components/stock/metrics-grid";
+import { NewsList } from "@/components/stock/news-list";
 import {
   getCompany,
+  getCompanyNews,
   getFundamentals,
   listCompanies,
   listGlossary,
@@ -31,10 +33,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function StockPage({ params }: Params) {
   const { symbol } = await params;
-  const [company, fundamentals, glossary] = await Promise.all([
+  const [company, fundamentals, glossary, news] = await Promise.all([
     getCompany(symbol),
     getFundamentals(symbol),
     listGlossary(),
+    getCompanyNews(symbol),
   ]);
   if (!company) notFound();
 
@@ -72,17 +75,14 @@ export default async function StockPage({ params }: Params) {
               glossary={glossary}
               asOf={fundamentals.asOf}
             />
+            <NewsList items={news} />
           </>
         ) : (
           <p className="border-border bg-card text-muted-foreground rounded-xl border border-dashed p-6 text-sm leading-relaxed">
-            A plain-English breakdown and metrics for {company.name} are being
-            written and will appear here soon.
+            A plain-English breakdown, metrics, and news for {company.name} are
+            being written and will appear here soon.
           </p>
         )}
-
-        <p className="border-border bg-card text-muted-foreground rounded-xl border border-dashed p-6 text-sm leading-relaxed">
-          Recent company news is coming in the next step.
-        </p>
       </div>
     </Container>
   );
