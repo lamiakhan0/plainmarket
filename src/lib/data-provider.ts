@@ -40,6 +40,11 @@ export async function getFundamentals(
   return fundamentals.find((f) => f.symbol.toUpperCase() === s) ?? null;
 }
 
+/** Symbols that currently have a full fundamentals snapshot. */
+export async function listFundamentalsSymbols(): Promise<string[]> {
+  return fundamentals.map((f) => f.symbol);
+}
+
 /** Recent news for a company, newest first. */
 export async function getCompanyNews(symbol: string): Promise<NewsItem[]> {
   const s = symbol.toUpperCase();
