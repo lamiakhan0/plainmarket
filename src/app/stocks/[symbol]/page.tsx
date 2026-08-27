@@ -34,13 +34,19 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function StockPage({ params }: Params) {
   const { symbol } = await params;
-  const [company, fundamentals, glossary, news] = await Promise.all([
-    getCompany(symbol),
-    getFundamentals(symbol),
-    listGlossary(),
-    getCompanyNews(symbol),
-  ]);
+  const [company, fundamentals, glossary, news, allCompanies] =
+    await Promise.all([
+      getCompany(symbol),
+      getFundamentals(symbol),
+      listGlossary(),
+      getCompanyNews(symbol),
+      listCompanies(),
+    ]);
   if (!company) notFound();
+
+  const peers = allCompanies
+    .filter((c) => c.sector === company.sector && c.symbol !== company.symbol)
+    .slice(0, 6);
 
   return (
     <Container className="py-12">
@@ -93,6 +99,28 @@ export default async function StockPage({ params }: Params) {
           </div>
         )}
       </div>
+
+      {peers.length > 0 && (
+        <section aria-labelledby="peers-heading" className="mt-12">
+          <h2
+            id="peers-heading"
+            className="text-primary text-xs font-semibold tracking-wide uppercase"
+          >
+            More in {company.sector}
+          </h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {peers.map((peer) => (
+              <Link
+                key={peer.symbol}
+                href={`/stocks/${peer.symbol}`}
+                className="border-border hover:border-primary hover:text-primary rounded-full border px-3 py-1 text-sm transition-colors"
+              >
+                {peer.name.replace(/ (Ltd\.?|Limited)$/, "")}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <p className="text-muted-foreground border-border mt-12 border-t pt-6 text-xs leading-relaxed">
         {siteConfig.disclaimerShort}
