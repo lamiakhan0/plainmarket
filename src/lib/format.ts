@@ -36,6 +36,15 @@ export function formatPercent(fraction: number, decimals = 1): string {
   return `${(fraction * 100).toFixed(decimals)}%`;
 }
 
+/** Format an ISO date (YYYY-MM-DD) as "30 Jun 2026". */
+export function formatDate(iso: string): string {
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(iso));
+}
+
 /** Coarse relative date, e.g. "yesterday", "5 days ago", "2 months ago". */
 export function formatRelativeDate(
   iso: string,

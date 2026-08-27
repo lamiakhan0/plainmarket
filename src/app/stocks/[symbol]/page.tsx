@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { ThirtySecondBreakdown } from "@/components/stock/thirty-second-breakdown";
+import { MetricsGrid } from "@/components/stock/metrics-grid";
 import {
   getCompany,
   getFundamentals,
   listCompanies,
+  listGlossary,
 } from "@/lib/data-provider";
 
 type Params = { params: Promise<{ symbol: string }> };
@@ -29,9 +31,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function StockPage({ params }: Params) {
   const { symbol } = await params;
-  const [company, fundamentals] = await Promise.all([
+  const [company, fundamentals, glossary] = await Promise.all([
     getCompany(symbol),
     getFundamentals(symbol),
+    listGlossary(),
   ]);
   if (!company) notFound();
 
@@ -60,19 +63,25 @@ export default async function StockPage({ params }: Params) {
         </p>
       </header>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 space-y-10">
         {fundamentals ? (
-          <ThirtySecondBreakdown breakdown={fundamentals.breakdown} />
+          <>
+            <ThirtySecondBreakdown breakdown={fundamentals.breakdown} />
+            <MetricsGrid
+              metrics={fundamentals.metrics}
+              glossary={glossary}
+              asOf={fundamentals.asOf}
+            />
+          </>
         ) : (
           <p className="border-border bg-card text-muted-foreground rounded-xl border border-dashed p-6 text-sm leading-relaxed">
-            A plain-English breakdown for {company.name} is being written and
-            will appear here soon.
+            A plain-English breakdown and metrics for {company.name} are being
+            written and will appear here soon.
           </p>
         )}
 
         <p className="border-border bg-card text-muted-foreground rounded-xl border border-dashed p-6 text-sm leading-relaxed">
-          Financial metrics with beginner-friendly explanations and recent news
-          are coming in the next steps.
+          Recent company news is coming in the next step.
         </p>
       </div>
     </Container>
