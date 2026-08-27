@@ -6,6 +6,7 @@ import { Container } from "@/components/layout/container";
 import { ThirtySecondBreakdown } from "@/components/stock/thirty-second-breakdown";
 import { MetricsGrid } from "@/components/stock/metrics-grid";
 import { NewsList } from "@/components/stock/news-list";
+import { siteConfig } from "@/config/site";
 import {
   getCompany,
   getCompanyNews,
@@ -78,12 +79,24 @@ export default async function StockPage({ params }: Params) {
             <NewsList items={news} />
           </>
         ) : (
-          <p className="border-border bg-card text-muted-foreground rounded-xl border border-dashed p-6 text-sm leading-relaxed">
-            A plain-English breakdown, metrics, and news for {company.name} are
-            being written and will appear here soon.
-          </p>
+          <div className="border-border bg-card rounded-xl border border-dashed p-6">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              A plain-English breakdown, metrics, and news for {company.name}{" "}
+              are being written and will appear here soon.
+            </p>
+            <Link
+              href="/companies"
+              className="text-primary mt-3 inline-block text-sm hover:underline"
+            >
+              See companies with full breakdowns
+            </Link>
+          </div>
         )}
       </div>
+
+      <p className="text-muted-foreground border-border mt-12 border-t pt-6 text-xs leading-relaxed">
+        {siteConfig.disclaimerShort}
+      </p>
     </Container>
   );
 }
