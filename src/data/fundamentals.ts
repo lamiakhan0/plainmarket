@@ -9,8 +9,8 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology and Automobiles sectors. Companies without a record
- * here get a generated fallback (see
+ * Information Technology, Automobiles and FMCG sectors. Companies without a
+ * record here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -1092,6 +1092,216 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "11.8%",
         standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "HINDUNILVR",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Hindustan Unilever is India's largest consumer-goods company, owned by the global Unilever group. It sells everyday brands across home care (Surf Excel, Vim), personal care (Dove, Lux, Lifebuoy), and foods and refreshment (Brooke Bond, Bru, Horlicks, Kissan).",
+      financialHealth:
+        "The company earns very high returns on capital, carries no meaningful debt, and hands almost all its profit back as dividends. Growth comes from a mix of price and volume; in rural slowdowns, volume growth can stall for several quarters.",
+      thingsToWatch: [
+        "Rural demand, a large share of sales, is sensitive to inflation and the monsoon.",
+        "Prices of inputs like palm oil, crude derivatives and tea move margins.",
+        "Smaller regional and direct-to-consumer brands are chipping away in some categories.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹5.8 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "52.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "11.2", standing: "typical" },
+      { id: "roe", label: "Return on equity", value: "20.6%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.03",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "2.1%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "4.6%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "16.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "NESTLEIND",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Nestlé India, a subsidiary of the Swiss group Nestlé, sells packaged foods and beverages: Maggi noodles and sauces, Nescafé coffee, KitKat and Munch chocolates, and infant nutrition brands like Cerelac and Lactogen.",
+      financialHealth:
+        "Nestlé India earns among the highest returns on capital in the market, helped by strong brands and an asset-light model. It has little debt and pays out most of its profit. Milk and cocoa prices are the main pressure on margins.",
+      thingsToWatch: [
+        "A large share of sales comes from just a few brands, with Maggi the biggest single one.",
+        "Milk, coffee and cocoa prices feed directly into costs.",
+        "Its products sit at a price premium, which can be a drag when consumers trade down.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.4 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "58.6", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "38.4", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "72.4%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.05",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.4%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "6.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "15.4%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "BRITANNIA",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Britannia Industries is one of India's largest food companies, best known for biscuits (Good Day, Marie Gold, Bourbon, Milk Bikis). It also sells bread, cakes, rusk and a growing range of dairy products like cheese and milk drinks.",
+      financialHealth:
+        "Britannia is highly profitable for a food business, with strong brands and wide distribution. It carries modest debt and pays generous dividends. Wheat, sugar, palm oil and milk prices are the main swing factor for margins.",
+      thingsToWatch: [
+        "Biscuits are a mature category in cities; most growth now has to come from rural areas and new products.",
+        "Commodity costs (wheat, palm oil, sugar) can move margins sharply.",
+        "The push into dairy and other adjacent categories is still building scale.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.4 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "52.8", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "26.4", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "58.2%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.42",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.8%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "7.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "12.6%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "TATACONSUM",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Tata Consumer Products sells tea (Tata Tea, Tetley), Tata Salt, coffee (Eight O'Clock), pulses and spices (Tata Sampann), and packaged water. It runs the Starbucks coffee-shop joint venture in India and has been expanding from beverages into a broader food and staples business.",
+      financialHealth:
+        "Margins are thinner than at pure branded-foods peers because salt and tea are lower-margin staples, but the newer packaged-foods lines are helping the mix. Debt is moderate after recent acquisitions, and return on equity is in the low teens.",
+      thingsToWatch: [
+        "Tea and salt are low-margin staples where pricing power is limited.",
+        "Recent acquisitions (Capital Foods, Organic India) need to be integrated and to earn their price.",
+        "Tea leaf prices can be volatile depending on the harvest.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.1 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "62.4", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.8", standing: "low" },
+      { id: "roe", label: "Return on equity", value: "9.4%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.18",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.1%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "9.8%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "9.2%",
+        standing: "low",
       },
     ],
   },
