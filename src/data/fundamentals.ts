@@ -9,8 +9,9 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology, Automobiles, FMCG and Pharmaceuticals sectors.
- * Companies without a record here get a generated fallback (see
+ * Information Technology, Automobiles, FMCG, Pharmaceuticals and Metals &
+ * Mining sectors. Companies without a record here get a generated fallback
+ * (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -1521,6 +1522,226 @@ export const fundamentals: Fundamentals[] = [
         id: "profitMargin",
         label: "Net profit margin",
         value: "22.8%",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "TATASTEEL",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Tata Steel is one of India's largest steel producers, making steel for construction, cars and packaging. It also has big operations in the Netherlands and the UK, though the European business has struggled and is being restructured toward lower-carbon electric furnaces.",
+      financialHealth:
+        "The Indian operations are low-cost and profitable, while the European business has swung between small profits and losses. Steel is highly cyclical, so earnings move sharply with global prices. The company has been paying down a debt load built up from past acquisitions.",
+      thingsToWatch: [
+        "Steel prices are set globally and swing with Chinese demand and exports.",
+        "The UK and Netherlands operations still need to prove they can make steady profits.",
+        "Coking coal and energy costs are large and volatile inputs.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.1 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "14.2", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.1", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "11.8%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.72",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "2.6%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "3.4%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "8.4%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "JSWSTEEL",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "JSW Steel is India's largest steelmaker by capacity, supplying construction, automotive and appliance customers. It has expanded aggressively through new plants and acquisitions and has smaller operations in the US and Italy.",
+      financialHealth:
+        "JSW runs efficient, large-scale plants and has grown faster than peers, but the constant capacity building keeps its debt relatively high. Profits rise and fall sharply with steel prices, and recent years have seen heavy investment ahead of demand.",
+      thingsToWatch: [
+        "Debt stays elevated because the company keeps investing in new capacity.",
+        "Earnings are highly sensitive to steel prices and to iron ore and coking coal costs.",
+        "Cheap steel imports into India can pressure domestic prices.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.4 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "22.6", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.8", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "12.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.98",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.1%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "5.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "6.8%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "HINDALCO",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Hindalco, part of the Aditya Birla group, makes aluminium and copper in India and owns Novelis, the world's largest producer of rolled aluminium and aluminium recycling, which supplies beverage cans and car makers mainly in North America and Europe.",
+      financialHealth:
+        "Novelis provides a relatively steady stream of profit from cans and car parts, which cushions the more volatile India aluminium and copper businesses. Debt is moderate and has been coming down. Aluminium prices and energy costs are the main swing factors.",
+      thingsToWatch: [
+        "The India aluminium business is exposed to global metal prices and to coal and power costs.",
+        "Novelis is investing heavily in new capacity and recycling, which raises spending in the near term.",
+        "Beverage-can demand in the US has at times been softer than expected.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.7 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "11.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "13.6%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.58",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.4%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "6.2%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "6.4%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "COALINDIA",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Coal India is the government-controlled company that mines about four-fifths of India's coal, most of it sold to power stations. It is effectively a near-monopoly supplier of a fuel the country still relies on heavily for electricity.",
+      financialHealth:
+        "Coal India generates large, steady cash flows, carries very little debt, and pays one of the highest dividend yields in the market. Prices for a big share of its output are regulated, so earnings are more stable than for most commodity producers.",
+      thingsToWatch: [
+        "Over the long term, the shift to renewable energy is a structural risk to coal demand.",
+        "As a government company, it can be directed to hold prices down or fund social spending.",
+        "Wage agreements with a large unionised workforce are a recurring cost pressure.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.6 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "7.8", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.8", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "38.4%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.08",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "5.4%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "4.2%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "22.6%",
         standing: "high",
       },
     ],
