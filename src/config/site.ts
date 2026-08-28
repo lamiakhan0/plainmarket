@@ -1,10 +1,21 @@
+/**
+ * Absolute site origin, used for metadataBase, the sitemap and robots.txt.
+ * Resolves to an explicit override, then Vercel's production URL (set
+ * automatically on deploy), then localhost for `next dev`.
+ */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 /** Static site-wide configuration and standing legal copy. */
 export const siteConfig = {
   name: "PlainMarket",
   tagline: "The Indian stock market, in plain English.",
   description:
     "PlainMarket helps beginners understand the Indian stock market in plain English. It translates public financial data into clear, jargon-free insights. It does not give investment recommendations or facilitate trading.",
-  url: "https://plainmarket.app",
+  url: siteUrl,
 
   nav: [
     { label: "Home", href: "/" },

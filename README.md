@@ -36,6 +36,19 @@ npm run dev        # http://localhost:3000
 
 Requires Node 24 (see `.nvmrc`).
 
+## Deploy (Vercel)
+
+The app is a zero-config Next.js project — no `vercel.json` needed.
+
+1. At [vercel.com/new](https://vercel.com/new), import `lamiakhan0/plainmarket`.
+2. Framework preset **Next.js**, build command `next build`, no env vars required.
+3. Deploy. `siteConfig.url` picks up the deployment URL automatically, so
+   metadata, `sitemap.xml` and `robots.txt` resolve correctly.
+4. To use a custom domain, add it in the Vercel project and set
+   `NEXT_PUBLIC_SITE_URL=https://yourdomain` in the project's env vars.
+
+Every push to `main` then deploys automatically.
+
 ## Scripts
 
 | Script                 | Does                       |
