@@ -15,6 +15,7 @@ import { fundamentals } from "@/data/fundamentals";
 import { news } from "@/data/news";
 import { glossary } from "@/data/glossary";
 import { rankCompanies } from "@/lib/search";
+import { generateFundamentals } from "@/lib/generate-fundamentals";
 
 /** All tracked companies (Nifty 50 for the MVP). */
 export async function listCompanies(): Promise<Company[]> {
@@ -32,16 +33,23 @@ export async function getCompany(symbol: string): Promise<Company | null> {
   return companies.find((c) => c.symbol.toUpperCase() === s) ?? null;
 }
 
-/** The financial snapshot for a company, or null if not available. */
+/**
+ * The financial snapshot for a company. Returns the curated record when one
+ * exists, otherwise a deterministic generated fallback (flagged
+ * `generated: true`). Null only when the symbol isn't a tracked company.
+ */
 export async function getFundamentals(
   symbol: string,
 ): Promise<Fundamentals | null> {
   const s = symbol.toUpperCase();
-  return fundamentals.find((f) => f.symbol.toUpperCase() === s) ?? null;
+  const curated = fundamentals.find((f) => f.symbol.toUpperCase() === s);
+  if (curated) return curated;
+  const company = companies.find((c) => c.symbol.toUpperCase() === s);
+  return company ? generateFundamentals(company) : null;
 }
 
-/** Symbols that currently have a full fundamentals snapshot. */
-export async function listFundamentalsSymbols(): Promise<string[]> {
+/** Symbols that have a hand-written (curated) fundamentals snapshot. */
+export async function listCuratedSymbols(): Promise<string[]> {
   return fundamentals.map((f) => f.symbol);
 }
 

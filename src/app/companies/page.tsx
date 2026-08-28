@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, PencilLine } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import { Container } from "@/components/layout/container";
-import { listCompanies, listFundamentalsSymbols } from "@/lib/data-provider";
+import { listCompanies, listCuratedSymbols } from "@/lib/data-provider";
 import { cn } from "@/lib/utils";
 import type { Company } from "@/types";
 
@@ -45,11 +45,11 @@ const sectorId = (sector: string) =>
   `sector-${sector.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
 export default async function CompaniesPage() {
-  const [companies, coveredSymbols] = await Promise.all([
+  const [companies, curatedSymbols] = await Promise.all([
     listCompanies(),
-    listFundamentalsSymbols(),
+    listCuratedSymbols(),
   ]);
-  const covered = new Set(coveredSymbols);
+  const curated = new Set(curatedSymbols);
   const sectors = groupBySector(companies);
 
   return (
@@ -64,14 +64,14 @@ export default async function CompaniesPage() {
         <div className="text-muted-foreground mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
           <span className="inline-flex items-center gap-1">
             <Check className="h-3 w-3" aria-hidden />
-            Full breakdown, metrics, and news
+            In-depth analysis
           </span>
           <span className="inline-flex items-center gap-1">
-            <PencilLine className="h-3 w-3" aria-hidden />
-            Breakdown still being written
+            <Sparkles className="h-3 w-3" aria-hidden />
+            Auto-generated overview
           </span>
           <span>
-            {covered.size} of {companies.length} ready so far
+            {curated.size} of {companies.length} have in-depth analysis
           </span>
         </div>
       </header>
@@ -103,7 +103,7 @@ export default async function CompaniesPage() {
 
             <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {list.map((company) => {
-                const isCovered = covered.has(company.symbol);
+                const isCurated = curated.has(company.symbol);
                 return (
                   <li key={company.symbol}>
                     <Link
@@ -126,17 +126,17 @@ export default async function CompaniesPage() {
                       <span
                         className={cn(
                           "mt-3 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs",
-                          isCovered
+                          isCurated
                             ? "bg-accent text-accent-foreground"
                             : "bg-muted text-muted-foreground",
                         )}
                       >
-                        {isCovered ? (
+                        {isCurated ? (
                           <Check className="h-3 w-3" aria-hidden />
                         ) : (
-                          <PencilLine className="h-3 w-3" aria-hidden />
+                          <Sparkles className="h-3 w-3" aria-hidden />
                         )}
-                        {isCovered ? "Full breakdown" : "Breakdown in progress"}
+                        {isCurated ? "In-depth analysis" : "Auto-generated"}
                       </span>
                     </Link>
                   </li>

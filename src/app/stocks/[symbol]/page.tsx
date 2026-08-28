@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { ThirtySecondBreakdown } from "@/components/stock/thirty-second-breakdown";
 import { MetricsGrid } from "@/components/stock/metrics-grid";
@@ -83,29 +83,41 @@ export default async function StockPage({ params }: Params) {
       </header>
 
       <div className="mt-10 space-y-10">
-        {fundamentals ? (
+        {fundamentals && (
           <>
+            {fundamentals.generated && (
+              <div className="border-border bg-muted/40 flex gap-3 rounded-xl border p-4 text-sm">
+                <Sparkles
+                  className="text-muted-foreground mt-0.5 h-4 w-4 shrink-0"
+                  aria-hidden
+                />
+                <p className="text-muted-foreground leading-relaxed">
+                  <span className="text-foreground font-medium">
+                    Auto-generated overview.
+                  </span>{" "}
+                  These figures and notes are produced automatically from sector
+                  patterns to give a rough picture. They are not researched or
+                  written by our team and may differ from what the company
+                  actually reports.{" "}
+                  <Link
+                    href="/companies"
+                    className="text-primary hover:underline"
+                  >
+                    See the companies with in-depth analysis
+                  </Link>
+                  .
+                </p>
+              </div>
+            )}
             <ThirtySecondBreakdown breakdown={fundamentals.breakdown} />
             <MetricsGrid
               metrics={fundamentals.metrics}
               glossary={glossary}
               asOf={fundamentals.asOf}
+              generated={fundamentals.generated}
             />
             <NewsList items={news} />
           </>
-        ) : (
-          <div className="border-border bg-card rounded-xl border border-dashed p-6">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              A plain-English breakdown, metrics, and news for {company.name}{" "}
-              are being written and will appear here soon.
-            </p>
-            <Link
-              href="/companies"
-              className="text-primary mt-3 inline-block text-sm hover:underline"
-            >
-              See companies with full breakdowns
-            </Link>
-          </div>
         )}
       </div>
 

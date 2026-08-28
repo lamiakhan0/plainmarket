@@ -18,10 +18,17 @@ interface MetricsGridProps {
   metrics: Metric[];
   glossary: GlossaryEntry[];
   asOf: string;
+  /** When true, the caption says the figures are an automatic estimate. */
+  generated?: boolean;
 }
 
 /** Grid of metric cards, each with an expandable plain-English explanation. */
-export function MetricsGrid({ metrics, glossary, asOf }: MetricsGridProps) {
+export function MetricsGrid({
+  metrics,
+  glossary,
+  asOf,
+  generated,
+}: MetricsGridProps) {
   const byId = new Map(glossary.map((entry) => [entry.id, entry]));
 
   return (
@@ -34,7 +41,10 @@ export function MetricsGrid({ metrics, glossary, asOf }: MetricsGridProps) {
           Key metrics, explained
         </h2>
         <p className="text-muted-foreground text-xs">
-          Figures as of {formatDate(asOf)} · illustrative mock data
+          Figures as of {formatDate(asOf)} ·{" "}
+          {generated
+            ? "automatically generated estimate"
+            : "illustrative mock data"}
         </p>
       </div>
 
