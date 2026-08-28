@@ -10,8 +10,8 @@ import type { Fundamentals } from "@/types";
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
  * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
- * Energy, Financial Services and Power & Utilities sectors. Companies without
- * a record here get a generated fallback (see
+ * Energy, Financial Services, Power & Utilities and Insurance sectors.
+ * Companies without a record here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -2122,6 +2122,116 @@ export const fundamentals: Fundamentals[] = [
         id: "profitMargin",
         label: "Net profit margin",
         value: "32.4%",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "HDFCLIFE",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "HDFC Life is one of India's largest private life insurers. It sells savings, investment-linked and protection policies, distributed heavily through HDFC Bank branches as well as its own agents and online.",
+      financialHealth:
+        "The company has grown new-business premiums steadily and focuses on the more profitable protection and non-participating products. Reported net profit is small relative to premiums, which is normal for life insurers, where value builds up over the life of each policy.",
+      thingsToWatch: [
+        "A large share of sales comes through HDFC Bank, so any change in that relationship matters.",
+        "Tax and regulatory changes to insurance products can quickly shift what customers buy.",
+        "Standard accounting profit understates the business; measures like new-business value give a fuller picture.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.6 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "72.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "8.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "11.8%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.4%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "New business premium growth (YoY)",
+        value: "14.2%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "4.6%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹8.2",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "SBILIFE",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "SBI Life is India's largest private life insurer by premiums. It sells savings, unit-linked and protection policies, distributed mainly through the vast branch network of State Bank of India.",
+      financialHealth:
+        "SBI Life runs with one of the lowest cost ratios in the industry, helped by the low-cost SBI branch channel, and has grown premiums consistently. As with all life insurers, headline profit is modest next to premium income because value accrues over each policy's life.",
+      thingsToWatch: [
+        "It depends heavily on State Bank of India for distribution.",
+        "Its product mix leans more toward market-linked plans, whose sales fall when equity markets are weak.",
+        "Changes to how insurance products are taxed can shift demand sharply.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.7 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "68.6", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "8.9", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "13.4%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.3%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "New business premium growth (YoY)",
+        value: "16.8%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "5.2%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹22.4",
         standing: "high",
       },
     ],
