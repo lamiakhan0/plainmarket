@@ -29,5 +29,8 @@ does and does not do, so that scope stays clear as features are added.
 3. Metric explanations describe what a number means, not what to do about it.
 4. When real data is introduced, label the "as of" date and the source on every
    figure.
+5. Generated (non-curated) analysis must always be labelled as automatically
+   generated and not researched, wherever it appears. It must never be presented
+   with the same weight as curated analysis.
 
 The canonical user-facing text lives in `src/config/site.ts`.

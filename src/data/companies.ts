@@ -178,7 +178,7 @@ export const companies: Company[] = [
       "Owns and operates most of India's high-voltage electricity transmission network.",
   },
   {
-    symbol: "M&M",
+    symbol: "MM",
     name: "Mahindra & Mahindra Ltd.",
     sector: "Automobiles",
     description:
