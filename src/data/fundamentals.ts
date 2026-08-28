@@ -246,12 +246,12 @@ export const fundamentals: Fundamentals[] = [
         standing: "high",
       },
       { id: "peRatio", label: "P/E ratio", value: "25.3", standing: "typical" },
-      { id: "pbRatio", label: "P/B ratio", value: "7.1", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "7.1", standing: "low" },
       {
         id: "roe",
         label: "Return on equity",
         value: "28.4%",
-        standing: "high",
+        standing: "typical",
       },
       {
         id: "debtToEquity",
