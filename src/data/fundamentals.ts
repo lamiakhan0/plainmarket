@@ -9,7 +9,8 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking
- * sector. Companies without a record here get a generated fallback (see
+ * and Information Technology sectors. Companies without a record here get a
+ * generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -606,6 +607,216 @@ export const fundamentals: Fundamentals[] = [
         label: "Earnings per share",
         value: "₹124.5",
         standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "HCLTECH",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "HCL Technologies is India's third-largest IT services company. Alongside the usual software development and IT operations work, it has an unusually large engineering and R&D services arm (designing chips, devices and software for tech and industrial firms) and a smaller software-products business.",
+      financialHealth:
+        "HCLTech is solidly profitable with very little debt and steady cash generation. Growth has held up a little better than some peers, helped by its engineering-services mix. It pays out a high share of profit as dividends.",
+      thingsToWatch: [
+        "The software-products business grows slowly and can drag on the overall growth rate.",
+        "Like all Indian IT, demand depends on technology budgets at large Western companies.",
+        "Engineering-services clients in areas like semiconductors and cars have their own cycles.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹4.6 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "25.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "6.2", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "23.6%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.08",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "3.6%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "5.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "16.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "WIPRO",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Wipro is one of India's largest IT services companies, offering software development, cloud migration, consulting and IT operations for global clients. It has a large base of banking and financial-services clients and, after buying the consultancy Capco, a bigger front-end advisory business.",
+      financialHealth:
+        "Wipro is profitable with low debt, but revenue growth has trailed its larger rivals for several years and margins are a little lower. It returns cash through regular buybacks and dividends.",
+      thingsToWatch: [
+        "Growth has lagged TCS, Infosys and HCLTech, and closing that gap has proven hard.",
+        "Heavy exposure to banking and financial-services clients means Western banking budgets matter a lot.",
+        "Frequent changes in senior leadership over recent years have unsettled strategy.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.7 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "22.1", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "3.6", standing: "low" },
+      { id: "roe", label: "Return on equity", value: "16.4%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.12",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "2.1%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "2.3%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "16.1%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "TECHM",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Tech Mahindra is an IT services company with an unusually large share of revenue from telecom operators, whom it helps run networks and billing systems, alongside standard software and IT work for other industries.",
+      financialHealth:
+        "Profit margins have been below the sector's leaders and the company is midway through a plan to improve them. Debt is low and cash generation is adequate. Growth has been soft as telecom clients cut spending.",
+      thingsToWatch: [
+        "Telecom customers have been spending cautiously, which hits Tech Mahindra more than diversified peers.",
+        "Its profit margins have room to improve, but the turnaround is still unproven.",
+        "Its record on past acquisitions has been mixed.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.5 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "31.5", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.1", standing: "low" },
+      { id: "roe", label: "Return on equity", value: "13.2%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.10",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "2.8%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "3.1%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "9.4%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "LTIM",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "LTIMindtree is an IT services company formed in 2022 by merging Larsen & Toubro's two listed software firms, L&T Infotech and Mindtree. It does software development, data and cloud work, and IT operations, with strong client bases in banking, insurance and technology.",
+      financialHealth:
+        "The company is profitable with negligible debt and good cash conversion. Growth has recently been closer to the sector average than to the top of the pack. The two merged businesses are still being fully integrated.",
+      thingsToWatch: [
+        "Completing the integration of L&T Infotech and Mindtree (systems, teams, clients) is still in progress.",
+        "A concentrated set of large clients means losing one would be felt.",
+        "Demand depends on Western technology budgets, as for all Indian IT.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.6 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "29.8", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "5.9", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "22.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.05",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.9%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "6.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "14.6%",
+        standing: "low",
       },
     ],
   },
