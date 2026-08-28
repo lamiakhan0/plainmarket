@@ -9,9 +9,9 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology, Automobiles, FMCG, Pharmaceuticals and Metals &
- * Mining sectors. Companies without a record here get a generated fallback
- * (see
+ * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining
+ * and Energy sectors. Companies without a record here get a generated
+ * fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -1743,6 +1743,116 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "22.6%",
         standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "ONGC",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "ONGC is India's largest producer of crude oil and natural gas, pumping most of the oil and gas the country produces domestically. It is majority government-owned and also controls the refiner HPCL and holds overseas oil and gas assets.",
+      financialHealth:
+        "ONGC generates large cash flows when oil prices are firm, and it carries moderate debt. Its realised prices can be capped by government measures when crude is high, and ageing fields mean it must keep spending heavily just to hold output steady.",
+      thingsToWatch: [
+        "Earnings rise and fall with global crude oil and gas prices, which it does not control.",
+        "The government can impose windfall taxes or price caps when oil is expensive.",
+        "Domestic oil and gas output has been slowly declining, so large investment is needed to arrest it.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.4 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "7.4", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "0.9", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "13.8%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.42",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "4.6%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "2.8%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "9.2%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "BPCL",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Bharat Petroleum refines crude oil and sells fuels through one of India's largest networks of petrol pumps. It is government-owned, after a plan to privatise it was called off, and is investing in refinery expansion, petrochemicals and electric-vehicle charging.",
+      financialHealth:
+        "Profits swing widely: refining margins and fuel-marketing margins both move with crude prices and with how freely the company is allowed to change pump prices. In good years it generates strong cash and pays generous dividends; in bad years marketing losses can wipe out profit.",
+      thingsToWatch: [
+        "Pump prices are influenced by the government, especially around elections, which can squeeze marketing margins when crude rises.",
+        "Refining margins are set by global product markets.",
+        "A large capital-spending programme will keep debt elevated for a few years.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.4 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "9.2", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "18.4%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.68",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "4.2%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "3.6%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "3.8%",
+        standing: "low",
       },
     ],
   },
