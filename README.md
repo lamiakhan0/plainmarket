@@ -49,6 +49,20 @@ The app is a zero-config Next.js project — no `vercel.json` needed.
 
 Every push to `main` then deploys automatically.
 
+## Deploy (GitHub Pages)
+
+A static-export path is also wired up, publishing to
+`https://lamiakhan0.github.io/plainmarket/`.
+
+One-time setup: in the repo, **Settings → Pages → Build and deployment →
+Source: GitHub Actions**.
+
+After that, the `Deploy to GitHub Pages` workflow builds on every push to
+`main` (`GITHUB_PAGES=true npm run build` → static `out/`) and publishes it.
+The `GITHUB_PAGES` flag turns on `output: "export"`, `basePath: "/plainmarket"`
+and unoptimized images in `next.config.ts`; a normal build and Vercel are
+untouched.
+
 ## Scripts
 
 | Script                 | Does                       |
