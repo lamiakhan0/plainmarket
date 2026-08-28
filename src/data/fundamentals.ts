@@ -10,8 +10,8 @@ import type { Fundamentals } from "@/types";
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
  * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
- * Energy and Financial Services sectors. Companies without a record here get
- * a generated fallback (see
+ * Energy, Financial Services and Power & Utilities sectors. Companies without
+ * a record here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -2012,6 +2012,116 @@ export const fundamentals: Fundamentals[] = [
         id: "eps",
         label: "Earnings per share",
         value: "₹242.3",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "NTPC",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "NTPC is India's largest electricity generator, producing roughly a quarter of the country's power, mostly from coal-fired plants. It is government-controlled and is expanding fast into solar and wind through its listed arm NTPC Green Energy.",
+      financialHealth:
+        "NTPC earns a regulated return on the money it invests in power plants, so its profits are fairly steady and predictable. It carries a lot of debt because building power stations is capital-heavy. It pays a reliable dividend.",
+      thingsToWatch: [
+        "Earnings depend on regulators keeping the allowed return on equity broadly where it is.",
+        "Delays in payments from cash-strapped state electricity distribution companies can tie up cash.",
+        "The long-term shift away from coal means a large, ongoing pivot to renewables.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.5 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "14.6", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.9", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "13.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "1.42",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "2.4%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "7.2%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "12.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "POWERGRID",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Power Grid Corporation builds and runs most of India's high-voltage transmission network — the long-distance lines that carry electricity between states. It is government-controlled and earns a regulated return on the assets it puts into service.",
+      financialHealth:
+        "Because its returns are regulated and its lines are always in use, Power Grid's earnings are among the most stable of any large listed company. It funds its network with debt but services it comfortably, and it pays out a high share of profit as dividends.",
+      thingsToWatch: [
+        "Growth depends on the pipeline of new transmission projects it wins, much of it now linked to connecting renewable energy.",
+        "A change in the regulated return on equity would move earnings.",
+        "Payment delays from state utilities can slow cash collection.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.8 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "16.8", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.9", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "18.6%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "1.28",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "3.6%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "5.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "32.4%",
         standing: "high",
       },
     ],
