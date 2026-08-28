@@ -11,6 +11,7 @@ import {
   getCompany,
   getCompanyNews,
   getFundamentals,
+  getSectorAverages,
   listCompanies,
   listGlossary,
 } from "@/lib/data-provider";
@@ -52,6 +53,8 @@ export default async function StockPage({ params }: Params) {
       listCompanies(),
     ]);
   if (!company) notFound();
+
+  const sectorAverages = await getSectorAverages(company.sector);
 
   const peers = allCompanies
     .filter((c) => c.sector === company.sector && c.symbol !== company.symbol)
@@ -114,6 +117,8 @@ export default async function StockPage({ params }: Params) {
               metrics={fundamentals.metrics}
               glossary={glossary}
               asOf={fundamentals.asOf}
+              sector={company.sector}
+              sectorAverages={sectorAverages}
               generated={fundamentals.generated}
             />
             <NewsList items={news} />

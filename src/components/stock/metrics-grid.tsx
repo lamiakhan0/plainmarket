@@ -18,6 +18,10 @@ interface MetricsGridProps {
   metrics: Metric[];
   glossary: GlossaryEntry[];
   asOf: string;
+  /** The company's sector, used to label the comparison figures. */
+  sector: string;
+  /** Average value per metric id across the sector, from getSectorAverages. */
+  sectorAverages: Record<string, string>;
   /** When true, the caption says the figures are an automatic estimate. */
   generated?: boolean;
 }
@@ -27,6 +31,8 @@ export function MetricsGrid({
   metrics,
   glossary,
   asOf,
+  sector,
+  sectorAverages,
   generated,
 }: MetricsGridProps) {
   const byId = new Map(glossary.map((entry) => [entry.id, entry]));
@@ -54,6 +60,8 @@ export function MetricsGrid({
             key={metric.id}
             metric={metric}
             entry={byId.get(metric.id)}
+            sector={sector}
+            sectorAverage={sectorAverages[metric.id]}
           />
         ))}
       </div>
@@ -64,9 +72,13 @@ export function MetricsGrid({
 function MetricCard({
   metric,
   entry,
+  sector,
+  sectorAverage,
 }: {
   metric: Metric;
   entry?: GlossaryEntry;
+  sector: string;
+  sectorAverage?: string;
 }) {
   const Icon = metric.standing ? STANDING_ICON[metric.standing] : null;
 
@@ -76,6 +88,12 @@ function MetricCard({
         <span className="text-muted-foreground text-sm">{metric.label}</span>
         <span className="text-lg font-semibold">{metric.value}</span>
       </div>
+
+      {sectorAverage && (
+        <p className="text-muted-foreground mt-1 text-xs">
+          {sector} average {sectorAverage}
+        </p>
+      )}
 
       {metric.standing && (
         <span className="text-muted-foreground bg-muted mt-2 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs">

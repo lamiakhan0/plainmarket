@@ -53,6 +53,61 @@ export async function listCuratedSymbols(): Promise<string[]> {
   return fundamentals.map((f) => f.symbol);
 }
 
+/** Metrics for which a sector average is meaningful (ratios and rates only). */
+const COMPARABLE_METRICS = new Set([
+  "peRatio",
+  "pbRatio",
+  "roe",
+  "debtToEquity",
+  "dividendYield",
+  "revenueGrowth",
+  "profitMargin",
+]);
+
+function parseMetricNumber(value: string): number | null {
+  const n = parseFloat(value.replace(/[^0-9.-]/g, ""));
+  return Number.isFinite(n) ? n : null;
+}
+
+function formatMetricAverage(id: string, n: number): string {
+  if (id === "debtToEquity") return n.toFixed(2);
+  if (id === "peRatio" || id === "pbRatio") return n.toFixed(1);
+  return `${n.toFixed(1)}%`;
+}
+
+/**
+ * Average of each comparable metric across every company in a sector,
+ * keyed by metric id. Metrics with fewer than two data points are omitted.
+ */
+export async function getSectorAverages(
+  sector: string,
+): Promise<Record<string, string>> {
+  const symbols = new Set(
+    companies.filter((c) => c.sector === sector).map((c) => c.symbol),
+  );
+  const totals = new Map<string, { sum: number; count: number }>();
+
+  for (const snapshot of fundamentals) {
+    if (!symbols.has(snapshot.symbol)) continue;
+    for (const metric of snapshot.metrics) {
+      if (!COMPARABLE_METRICS.has(metric.id)) continue;
+      const n = parseMetricNumber(metric.value);
+      if (n === null) continue;
+      const agg = totals.get(metric.id) ?? { sum: 0, count: 0 };
+      agg.sum += n;
+      agg.count += 1;
+      totals.set(metric.id, agg);
+    }
+  }
+
+  const averages: Record<string, string> = {};
+  for (const [id, { sum, count }] of totals) {
+    if (count < 2) continue;
+    averages[id] = formatMetricAverage(id, sum / count);
+  }
+  return averages;
+}
+
 /** Recent news for a company, newest first. */
 export async function getCompanyNews(symbol: string): Promise<NewsItem[]> {
   const s = symbol.toUpperCase();
