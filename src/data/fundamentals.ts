@@ -9,9 +9,9 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining
- * and Energy sectors. Companies without a record here get a generated
- * fallback (see
+ * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
+ * Energy and Financial Services sectors. Companies without a record here get
+ * a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -1853,6 +1853,166 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "3.8%",
         standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "BAJFINANCE",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Bajaj Finance is India's largest non-bank consumer lender. It finances purchases of phones, appliances and other goods at the point of sale, issues EMI cards, and gives personal, small-business and home loans to a customer base of around 90 million.",
+      financialHealth:
+        "The company has grown its loan book at a fast pace for many years while keeping bad loans low and return on equity high. That track record earns it one of the highest valuations among lenders. Growth this fast needs constant access to funding at reasonable rates.",
+      thingsToWatch: [
+        "Very fast loan growth is hard to sustain, and any rise in defaults would be noticed quickly given the high valuation.",
+        "As a non-bank it relies on borrowing from banks and bond markets; if that funding gets costlier, margins narrow.",
+        "Regulators have tightened rules on digital and unsecured lending, where Bajaj is active.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹6.2 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "31.4", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "5.8", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "21.6%",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.5%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Loan book growth (YoY)",
+        value: "26.4%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "24.2%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹315.6",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "BAJAJFINSV",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Bajaj Finserv is a holding company for the Bajaj group's financial businesses. Its main assets are a majority stake in Bajaj Finance (consumer lending), a life insurer and a general insurer (both Bajaj Allianz), and some newer digital and health ventures.",
+      financialHealth:
+        "Most of its reported profit comes from consolidating Bajaj Finance, so its results move with that company. The two insurance businesses add steadier premium income. As a holding company, its market value tends to sit at a discount to the combined worth of its parts.",
+      thingsToWatch: [
+        "Its fortunes are tied closely to Bajaj Finance, which drives the bulk of profit.",
+        "The general insurance business is exposed to natural-catastrophe claims in a bad year.",
+        "Holding companies often trade below the value of the businesses they own.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.2 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "34.8", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.2", standing: "typical" },
+      { id: "roe", label: "Return on equity", value: "13.8%", standing: "low" },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.1%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "18.6%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "12.4%",
+        standing: "low",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹58.4",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "SHRIRAMFIN",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Shriram Finance is a non-bank lender formed by merging the Shriram group's truck-finance and retail-finance arms. It specialises in loans for commercial vehicles (especially used trucks bought by small operators), and also does two-wheeler, gold, small-business and personal loans.",
+      financialHealth:
+        "Lending to small truck operators and other underbanked borrowers carries higher interest rates and higher defaults than mainstream lending. The company has managed this niche for decades, earns a solid return on equity, and pays a healthy dividend. Funding cost is a key lever.",
+      thingsToWatch: [
+        "Truck-finance demand is cyclical and tied to freight rates and the wider economy.",
+        "Its borrowers are more vulnerable in downturns, so bad loans can rise faster than at banks.",
+        "It depends on wholesale funding, so its borrowing costs matter a lot.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.2 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "13.2", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.1", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "16.4%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.6%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Loan book growth (YoY)",
+        value: "19.8%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "22.8%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹242.3",
+        standing: "high",
       },
     ],
   },
