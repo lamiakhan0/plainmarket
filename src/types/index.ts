@@ -51,6 +51,11 @@ export interface Fundamentals {
   metrics: Metric[];
   /** ISO date (YYYY-MM-DD) the snapshot represents. */
   asOf: string;
+  /**
+   * True when this snapshot is deterministically generated from sector
+   * patterns rather than written by the team. Absent/false means curated.
+   */
+  generated?: boolean;
 }
 
 /** A recent news item about a company. */
