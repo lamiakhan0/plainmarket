@@ -8,13 +8,10 @@ import type { Fundamentals } from "@/types";
  * in `src/data/glossary.ts`. `standing` is relative to the company's sector.
  * Breakdown text stays descriptive, never advisory.
  *
- * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
- * Energy, Financial Services, Power & Utilities, Insurance, Consumer Goods and
- * Diversified sectors. Companies without a record here get a generated
- * fallback (see
- * `src/lib/generate-fundamentals.ts`). Read this only through
- * `src/lib/data-provider.ts`.
+ * Curated coverage: all 50 Nifty 50 companies now have a hand-written
+ * record here. The generated fallback in `src/lib/generate-fundamentals.ts`
+ * is a safety net for any company added later without one. Read this only
+ * through `src/lib/data-provider.ts`.
  */
 export const fundamentals: Fundamentals[] = [
   {
@@ -2438,6 +2435,281 @@ export const fundamentals: Fundamentals[] = [
         id: "profitMargin",
         label: "Net profit margin",
         value: "6.8%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "ULTRACEMCO",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "UltraTech Cement is India's largest cement producer, with about a third of the country's capacity, and is part of the Aditya Birla group. It supplies builders, infrastructure projects and individual home-builders, and has grown both by building new plants and buying rivals.",
+      financialHealth:
+        "UltraTech is profitable and generates strong cash, though the steady stream of expansion and acquisitions keeps debt at a moderate level. Cement is regional and cyclical: prices and volumes depend on construction activity in each area, and energy is a big cost.",
+      thingsToWatch: [
+        "Cement demand tracks housing and infrastructure spending, which can slow sharply.",
+        "Coal and pet coke prices feed directly into production costs.",
+        "A wave of industry consolidation has raised competition for acquisitions and, at times, price wars.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.4 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "42.6", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.8", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "12.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.32",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.6%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "9.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "10.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "BHARTIARTL",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Bharti Airtel is India's second-largest mobile operator after Reliance Jio, and also runs large broadband, enterprise and data-centre businesses. Through the separately listed Airtel Africa, it is a major telecom player across 14 African countries.",
+      financialHealth:
+        "Profits have improved as the industry settled into three private players and tariffs rose, lifting revenue per user. The company still carries sizeable debt from buying spectrum, though it has been paying it down. Africa adds growth but also currency risk.",
+      thingsToWatch: [
+        "Revenue per user needs to keep rising to justify the heavy investment in spectrum and networks.",
+        "The African business is exposed to currency swings in markets like Nigeria.",
+        "Regular spectrum auctions and network upgrades keep capital spending high.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹9.8 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "48.2", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "8.4", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "14.6%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "1.42",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.6%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "12.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "13.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "LT",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Larsen & Toubro is India's largest engineering and construction company, building roads, metros, ports, power plants, refineries and defence equipment across India and the Middle East. It also controls the listed IT firms LTIMindtree and LTTS and is starting green-energy and data-centre businesses.",
+      financialHealth:
+        "Earnings are driven by the order book: L&T has been winning large infrastructure and Middle East contracts, which supports steady revenue growth. Construction ties up cash in projects, so it carries working-capital debt. The IT subsidiaries add a high-margin, cash-generative layer.",
+      thingsToWatch: [
+        "Results depend on the flow of new orders and on executing them without cost overruns or payment delays.",
+        "A big share of order inflow now comes from the Middle East, adding geographic concentration.",
+        "Government and state-owned clients can be slow to pay, tying up working capital.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹5.2 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "34.8", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "5.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "16.8%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "1.12",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.9%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "14.2%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "7.4%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "ADANIPORTS",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Adani Ports is India's largest private port operator, handling roughly a quarter of the country's sea cargo through Mundra and around a dozen other ports. It also runs a logistics arm (rail, warehousing) and has taken stakes in ports overseas, including in Israel and Sri Lanka.",
+      financialHealth:
+        "Ports are a high-margin, fairly steady infrastructure business, and Adani Ports has grown cargo volumes faster than the industry. It carries a meaningful amount of debt from acquisitions and expansion, and its shares move with news about the wider Adani group.",
+      thingsToWatch: [
+        "Cargo volumes track India's trade and the global economy.",
+        "Debt is significant and part of it is in foreign currency.",
+        "As part of the Adani group, its share price reacts to group-wide governance and debt news.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.1 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "28.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.2", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "17.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.82",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.7%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "13.6%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "26.8%",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "APOLLOHOSP",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Apollo Hospitals runs one of India's largest chains of private hospitals, alongside the Apollo Pharmacy retail chain and Apollo 24/7, a digital health and online-pharmacy platform. Hospitals provide most of the profit; the digital arm is still loss-making as it scales.",
+      financialHealth:
+        "The hospital business is profitable and improving as occupancy and revenue per bed rise, and the mature pharmacy chain adds steady sales. Reported profit is held back by investment in the digital health platform. Debt is moderate and mostly tied to building new hospitals.",
+      thingsToWatch: [
+        "Adding hospital beds is expensive and takes a few years to fill, weighing on returns in the meantime.",
+        "The digital health arm continues to lose money while it builds scale.",
+        "Doctor pay and medical-supply costs are steady upward pressures.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.1 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "68.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "11.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "16.8%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.38",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.4%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "14.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "7.6%",
         standing: "low",
       },
     ],

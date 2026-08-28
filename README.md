@@ -16,8 +16,9 @@ MVP built and working, on mock data. Implemented:
 - Financial metrics with beginner-friendly explanations
 - Recent company news
 
-6 companies have hand-written ("curated") analysis; the other 44 use a
-deterministic generated fallback, clearly labelled as such (see below).
+All 50 companies have hand-written ("curated") analysis. A deterministic
+generated fallback exists as a safety net and is clearly labelled wherever
+it would appear (see below).
 
 ## Tech stack
 
@@ -78,15 +79,16 @@ Supabase or a market API later is a change confined to that one file.
 
 `getFundamentals(symbol)` returns:
 
-- the **curated** record from `src/data/fundamentals.ts` if one exists
-  (currently 6 companies: RELIANCE, TCS, HDFCBANK, INFY, ITC, MARUTI), or
+- the **curated** record from `src/data/fundamentals.ts` if one exists — all
+  50 current Nifty 50 companies have one, or
 - a **generated** fallback from `src/lib/generate-fundamentals.ts` — a pure,
   dependency-free function that derives plausible metrics and a templated
   breakdown from the ticker (string hash → mulberry32) and a per-sector range
-  table. Same input always produces the same output.
+  table. Same input always produces the same output. This is the safety net
+  for any company added to `src/data/companies.ts` before its curated record.
 
 Generated snapshots carry `generated: true`. The stock page shows an
 "Auto-generated overview" callout for them and `/companies` marks each company
 "In-depth analysis" or "Auto-generated". `listCuratedSymbols()` returns the
-curated set. To promote a company, add a record to `src/data/fundamentals.ts` —
-no other change needed.
+curated set. To add analysis for a new company, add a record to
+`src/data/fundamentals.ts` — no other change needed.
