@@ -9,8 +9,8 @@ import type { Fundamentals } from "@/types";
  * Breakdown text stays descriptive, never advisory.
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
- * Information Technology, Automobiles and FMCG sectors. Companies without a
- * record here get a generated fallback (see
+ * Information Technology, Automobiles, FMCG and Pharmaceuticals sectors.
+ * Companies without a record here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -1302,6 +1302,226 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "9.2%",
         standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "SUNPHARMA",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Sun Pharmaceutical is India's largest drugmaker. It sells generic medicines around the world, has the biggest branded-medicine business in India, and has been building a higher-margin specialty portfolio (skin, eye and other branded drugs) in the United States.",
+      financialHealth:
+        "Sun is profitable with low debt and strong cash generation. The shift toward specialty drugs has lifted margins above those of a typical generics maker. US generic price competition and the cost of running specialty sales teams are the main pressures.",
+      thingsToWatch: [
+        "US generic prices have been under long-running pressure from consolidated buyers.",
+        "Specialty drugs need heavy marketing spend before they pay off.",
+        "Regulatory inspections of manufacturing plants can disrupt supply and sales.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹4.4 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "36.2", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "6.4", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "17.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.05",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.8%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "9.6%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "17.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "DRREDDY",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Dr. Reddy's Laboratories makes generic medicines and the active ingredients that go into them, selling mainly in the United States, India, Russia and other emerging markets. It also has a small but growing biosimilars business and, after a recent acquisition, a consumer-health nicotine-replacement range.",
+      financialHealth:
+        "The company is profitable with low debt and a net cash position. Earnings depend heavily on how many high-value generic launches it lands in the US in a given year, which makes results lumpy. Margins are solid for a generics maker.",
+      thingsToWatch: [
+        "US earnings swing with the timing of big generic launches and how fast prices then erode.",
+        "One product (a generic of a cancer drug) has contributed an outsized share of recent US profit.",
+        "Factory inspections by the US regulator are a recurring risk.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.1 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "18.6", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "3.2", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "18.9%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.08",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.7%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "8.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "16.4%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "CIPLA",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Cipla is best known in India for respiratory medicines and inhalers, where it is the market leader, and has a strong presence in South Africa and other emerging markets. In the United States it sells generics and has been pushing into harder-to-copy respiratory and peptide products.",
+      financialHealth:
+        "Cipla is profitable with very low debt and a net cash balance sheet. Its large, steady India branded business gives it a more stable earnings base than a pure US generics maker. Growth now depends on landing complex US respiratory launches.",
+      thingsToWatch: [
+        "Complex US launches (such as a generic of a major inhaler) have faced delays and regulatory hurdles.",
+        "Manufacturing-plant inspections by the US regulator have flagged issues in the past.",
+        "The South Africa business carries currency risk from the rand.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.3 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "24.8", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "3.8", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "16.8%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.03",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.9%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "7.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "16.2%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "DIVISLAB",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Divi's Laboratories does not sell finished medicines. It makes active pharmaceutical ingredients and intermediates in bulk for other drug companies — both large-volume generic ingredients and custom synthesis work for innovator drugmakers.",
+      financialHealth:
+        "Divi's earns unusually high margins for a manufacturer, is debt-free and holds a large cash pile. Because it supplies other pharma companies, its sales rise and fall with their production and inventory cycles, which made recent years bumpy.",
+      thingsToWatch: [
+        "Sales depend on a relatively small number of large pharma customers and their ordering patterns.",
+        "A handful of products account for a big share of revenue.",
+        "New capacity has been added ahead of demand, which weighs on returns until it fills up.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.6 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "42.6", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "7.8", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "16.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.00",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.7%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "11.4%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "22.8%",
+        standing: "high",
       },
     ],
   },
