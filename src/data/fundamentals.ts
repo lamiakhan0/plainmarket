@@ -8,9 +8,9 @@ import type { Fundamentals } from "@/types";
  * in `src/data/glossary.ts`. `standing` is relative to the company's sector.
  * Breakdown text stays descriptive, never advisory.
  *
- * Curated coverage: the six landing-page companies plus the full Banking
- * and Information Technology sectors. Companies without a record here get a
- * generated fallback (see
+ * Curated coverage: the six landing-page companies plus the full Banking,
+ * Information Technology and Automobiles sectors. Companies without a record
+ * here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -817,6 +817,281 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "14.6%",
         standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "TATAMOTORS",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Tata Motors makes passenger cars, trucks and buses in India and owns the British luxury carmaker Jaguar Land Rover, which brings in most of its revenue. In India it is the market leader in electric passenger cars and a major player in commercial vehicles.",
+      financialHealth:
+        "Profits have improved sharply as Jaguar Land Rover recovered and Indian commercial-vehicle demand held up. The company has cut what was once a very large debt pile close to zero on a net basis. Results still swing with the global luxury-car cycle.",
+      thingsToWatch: [
+        "Jaguar Land Rover drives most of the profit, so European and Chinese luxury-car demand matters more than the Indian business.",
+        "Commercial-vehicle sales are closely tied to India's economic and infrastructure cycle.",
+        "Heavy spending is needed on electric and cleaner models across both businesses.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.5 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "12.4", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "3.1", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "22.6%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.35",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.1%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "11.2%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "7.8%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "MM",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Mahindra & Mahindra makes SUVs and is India's largest tractor maker. Its SUV line-up (Thar, Scorpio-N, XUV700) has sold strongly in recent years. It also holds stakes in listed group companies in IT, finance and other areas.",
+      financialHealth:
+        "Both the SUV and tractor businesses have been profitable, and the company has tightened focus after exiting several loss-making ventures. Return on equity is healthy and debt in the core auto business is low. Tractor demand rises and falls with the farm economy.",
+      thingsToWatch: [
+        "Tractor sales depend on monsoon rains, crop prices and rural incomes.",
+        "SUV demand has been strong, but competition in that segment is intense.",
+        "The value of its many listed and unlisted subsidiaries is a large part of the overall picture.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.6 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "24.8", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "18.4%",
+        standing: "typical",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.12",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.9%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "12.6%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "10.6%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "BAJAJ-AUTO",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Bajaj Auto makes motorcycles and three-wheelers. It sells a large share of its output abroad, particularly in Africa, Latin America and South Asia, and owns a stake in Austria's KTM. It also sells the Chetak electric scooter.",
+      financialHealth:
+        "Bajaj Auto runs some of the highest profit margins in the industry, holds a large cash pile and almost no debt, and returns a lot of cash to shareholders through dividends and buybacks. Exports give it a second demand engine alongside India.",
+      thingsToWatch: [
+        "A big export business means currency swings and economic trouble in Africa or Latin America feed through to results.",
+        "It has been slower into electric two-wheelers than some newer rivals.",
+        "Domestic entry-level motorcycle demand has been patchy.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.6 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "31.2", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "8.4", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "27.8%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.00",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.9%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "9.4%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "17.2%",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "EICHERMOT",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Eicher Motors owns Royal Enfield, which dominates India's mid-size motorcycle segment (250–750cc) with models like the Classic and Hunter, and holds a commercial-vehicle joint venture with Volvo. Royal Enfield drives most of the profit.",
+      financialHealth:
+        "Royal Enfield earns unusually high margins for a motorcycle business, and the company has little debt and strong cash generation. Growth depends on holding its niche as rivals launch competing mid-size bikes and on expanding Royal Enfield sales overseas.",
+      thingsToWatch: [
+        "Royal Enfield faces new competition in the mid-size segment from Bajaj-Triumph, Harley-Hero and others.",
+        "The company is heavily reliant on one brand in one segment.",
+        "Overseas expansion is still a small part of sales.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.4 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "29.4", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "6.8", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "23.6%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.01",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.3%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "10.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "19.4%",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "HEROMOTOCO",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Hero MotoCorp is the world's largest maker of motorcycles and scooters by volume, built on a dominant position in India's mass-market commuter motorcycles. It is expanding into premium bikes (with Harley-Davidson) and electric scooters (Vida).",
+      financialHealth:
+        "Hero is highly profitable in its core commuter segment, holds net cash and pays generous dividends. The challenge is growth: commuter demand has been flat for years, and Hero is under-represented in the faster-growing scooter, premium and electric segments.",
+      thingsToWatch: [
+        "Mass-market motorcycle demand in India has been broadly flat for several years.",
+        "Hero is weaker in scooters and premium bikes, where the market is growing faster.",
+        "The move into electric scooters is early and competitive.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹0.9 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "19.6", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "4.2", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "22.1%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.02",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "3.4%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "6.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "11.8%",
+        standing: "typical",
       },
     ],
   },
