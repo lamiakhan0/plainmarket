@@ -10,8 +10,9 @@ import type { Fundamentals } from "@/types";
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
  * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
- * Energy, Financial Services, Power & Utilities, Insurance and Consumer Goods
- * sectors. Companies without a record here get a generated fallback (see
+ * Energy, Financial Services, Power & Utilities, Insurance, Consumer Goods and
+ * Diversified sectors. Companies without a record here get a generated
+ * fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -2337,6 +2338,106 @@ export const fundamentals: Fundamentals[] = [
         id: "profitMargin",
         label: "Net profit margin",
         value: "7.8%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "ADANIENT",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Adani Enterprises is the flagship of the Adani group and acts as its incubator: it builds new businesses — airports, roads, data centres, green hydrogen and solar manufacturing, mining services — and spins the larger ones off as separate listed companies over time.",
+      financialHealth:
+        "The company is in a heavy investment phase, funding large projects with a mix of debt and equity, so borrowings are high and profits are lumpy as new businesses ramp up. It has faced questions from short-sellers and regulators about group governance and debt levels.",
+      thingsToWatch: [
+        "Debt is high and several businesses are years away from generating steady profit.",
+        "The group's governance and related-party dealings have drawn scrutiny from short-sellers and regulators.",
+        "Its market value swings sharply on group-wide news.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.8 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "78.4", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "5.8", standing: "typical" },
+      { id: "roe", label: "Return on equity", value: "9.2%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "1.34",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.1%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "14.6%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "4.2%",
+        standing: "low",
+      },
+    ],
+  },
+  {
+    symbol: "GRASIM",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Grasim is an Aditya Birla group company that makes viscose fibre (used in textiles) and chemicals like caustic soda, and is the controlling shareholder of UltraTech Cement and Aditya Birla Capital. It has also spent heavily to launch a new paints business, Birla Opus.",
+      financialHealth:
+        "Most of Grasim's underlying value sits in its stakes in UltraTech and Aditya Birla Capital, with the standalone fibre and chemicals business adding cyclical earnings. The recent paints launch involves large upfront spending that will weigh on profit for a few years before it pays off.",
+      thingsToWatch: [
+        "The new paints business needs years and heavy spending to reach break-even, against an entrenched leader.",
+        "Viscose and caustic soda prices are cyclical and partly set by global markets.",
+        "As a holding company, its shares often trade below the value of its stakes.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.9 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "24.2", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.8", standing: "low" },
+      { id: "roe", label: "Return on equity", value: "8.4%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.48",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.6%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "9.8%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "6.8%",
         standing: "low",
       },
     ],
