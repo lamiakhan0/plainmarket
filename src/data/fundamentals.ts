@@ -10,8 +10,8 @@ import type { Fundamentals } from "@/types";
  *
  * Curated coverage: the six landing-page companies plus the full Banking,
  * Information Technology, Automobiles, FMCG, Pharmaceuticals, Metals & Mining,
- * Energy, Financial Services, Power & Utilities and Insurance sectors.
- * Companies without a record here get a generated fallback (see
+ * Energy, Financial Services, Power & Utilities, Insurance and Consumer Goods
+ * sectors. Companies without a record here get a generated fallback (see
  * `src/lib/generate-fundamentals.ts`). Read this only through
  * `src/lib/data-provider.ts`.
  */
@@ -2233,6 +2233,111 @@ export const fundamentals: Fundamentals[] = [
         label: "Earnings per share",
         value: "₹22.4",
         standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "ASIANPAINT",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Asian Paints is India's largest paint company, with more than a third of the decorative-paints market. It also sells waterproofing, adhesives and, increasingly, home-decor products such as kitchens and bathroom fittings.",
+      financialHealth:
+        "Asian Paints earns high returns on capital, carries almost no debt and pays steady dividends, helped by a very wide dealer and tinting-machine network. Growth and margins have come under pressure from well-funded new entrants and from swings in crude-linked raw-material costs.",
+      thingsToWatch: [
+        "New competitors (Grasim's Birla Opus, JSW Paints) are spending heavily to win share.",
+        "Titanium dioxide and other crude-linked inputs drive margins up and down.",
+        "Repainting is discretionary spending and softens when household budgets are tight.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹2.4 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "52.6", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "12.8", standing: "typical" },
+      { id: "roe", label: "Return on equity", value: "24.8%", standing: "low" },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.06",
+        standing: "low",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.2%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "4.2%",
+        standing: "low",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "13.4%",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "TITAN",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Titan, part of the Tata group, is best known for Tanishq, India's largest branded jewellery chain, which brings in most of its sales. It also makes Titan and Fastrack watches, runs the Titan Eye+ eyewear chain, and has smaller businesses in sarees and fragrances.",
+      financialHealth:
+        "The jewellery business has grown fast as buyers shift from local goldsmiths to trusted brands. Titan earns healthy returns and carries modest debt, some of it tied to gold inventory. Profits can wobble when gold prices move sharply or when customers delay big purchases.",
+      thingsToWatch: [
+        "Around 85% of revenue comes from jewellery, so gold-price swings and wedding-season demand matter a lot.",
+        "Sudden jumps in gold prices can cause customers to postpone buying.",
+        "The watches and eyewear businesses are much smaller and grow more slowly.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.1 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "84.2", standing: "high" },
+      { id: "pbRatio", label: "P/B ratio", value: "24.6", standing: "high" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "32.4%",
+        standing: "high",
+      },
+      {
+        id: "debtToEquity",
+        label: "Debt to equity",
+        value: "0.62",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.5%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Revenue growth (YoY)",
+        value: "16.8%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "7.8%",
+        standing: "low",
       },
     ],
   },
