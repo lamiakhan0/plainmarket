@@ -8,8 +8,10 @@ import type { Fundamentals } from "@/types";
  * in `src/data/glossary.ts`. `standing` is relative to the company's sector.
  * Breakdown text stays descriptive, never advisory.
  *
- * Coverage so far: the six companies linked from the landing page. The rest
- * are added in a later step. Read this only through `src/lib/data-provider.ts`.
+ * Curated coverage: the six landing-page companies plus the full Banking
+ * sector. Companies without a record here get a generated fallback (see
+ * `src/lib/generate-fundamentals.ts`). Read this only through
+ * `src/lib/data-provider.ts`.
  */
 export const fundamentals: Fundamentals[] = [
   {
@@ -329,6 +331,281 @@ export const fundamentals: Fundamentals[] = [
         label: "Net profit margin",
         value: "9.3%",
         standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "ICICIBANK",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "ICICI Bank is India's second-largest private-sector bank. It lends to individuals (home, car and personal loans, credit cards) and to businesses, and earns mainly from the gap between the interest it charges and the interest it pays, plus fees from payments and wealth management.",
+      financialHealth:
+        "The bank has been one of the more profitable large lenders, with return on equity in the high teens and a low share of bad loans. Loan and deposit growth has been steady, and fee income adds a cushion when lending margins tighten.",
+      thingsToWatch: [
+        "Unsecured loans such as personal loans and credit cards have grown quickly and are more prone to defaults if the economy weakens.",
+        "Competition for deposits across banks can push up funding costs.",
+        "A large retail loan book means results track household borrowing demand closely.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹9.8 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "17.2", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "3.1", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "17.8%",
+        standing: "high",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.8%",
+        standing: "typical",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Net interest income growth (YoY)",
+        value: "12.6%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "26.4%",
+        standing: "high",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹64.5",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "SBIN",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "State Bank of India is the country's largest bank and is majority-owned by the government. It has the widest branch and ATM network in India, a very large deposit base, and lends across retail, farm and corporate segments. It also holds stakes in listed insurance, mutual fund and card businesses.",
+      financialHealth:
+        "Profits have improved as older bad loans were cleaned up, and return on equity has moved into the mid-teens. A very large, low-cost deposit base is a structural advantage. As a government-owned bank, it sometimes carries policy goals alongside commercial ones.",
+      thingsToWatch: [
+        "As a government bank, it can be asked to support national schemes that may not be the most profitable use of its capital.",
+        "Corporate lending cycles have historically caused spikes in bad loans.",
+        "The value of its insurance and other subsidiaries is a meaningful part of the overall picture.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹7.6 lakh crore",
+        standing: "high",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "9.8", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.7", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "15.3%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.6%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Net interest income growth (YoY)",
+        value: "10.1%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "22.1%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹78.2",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "KOTAKBANK",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Kotak Mahindra Bank is a mid-sized private-sector bank known for conservative lending and a strong presence in wealth management, broking and asset management through its subsidiaries. It has historically prioritised profitability and asset quality over rapid growth.",
+      financialHealth:
+        "The bank runs with high capital levels, a low share of bad loans and healthy return on equity. Growth has generally been slower than some private peers, partly by choice. Its non-bank businesses add a steady stream of fee income.",
+      thingsToWatch: [
+        "A cautious approach can mean slower loan growth when rivals expand faster.",
+        "A past regulatory restriction on adding new digital customers showed how supervision can affect growth.",
+        "The transition after its long-time founder-CEO stepped back from the top job is still being watched.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.6 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "18.4", standing: "typical" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.6", standing: "typical" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "14.2%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.3%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Net interest income growth (YoY)",
+        value: "8.2%",
+        standing: "typical",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "25.6%",
+        standing: "high",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹92.1",
+        standing: "high",
+      },
+    ],
+  },
+  {
+    symbol: "AXISBANK",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "Axis Bank is India's third-largest private-sector bank. It offers the full range of retail and corporate banking, and has expanded in credit cards and digital payments, including after buying Citi's India consumer business.",
+      financialHealth:
+        "Profitability has improved as the bank reduced problem corporate loans and grew higher-margin retail lending, lifting return on equity into the mid-teens. Integrating the acquired Citi customers has added costs in the short term.",
+      thingsToWatch: [
+        "The Citi consumer business integration adds one-off costs and execution risk.",
+        "A sizeable corporate loan book leaves it exposed to business-cycle downturns.",
+        "Deposit growth needs to keep pace with its lending ambitions.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹3.7 lakh crore",
+        standing: "typical",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "13.6", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "2.1", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "15.8%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "0.2%",
+        standing: "low",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Net interest income growth (YoY)",
+        value: "11.4%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "23.9%",
+        standing: "typical",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹86.7",
+        standing: "typical",
+      },
+    ],
+  },
+  {
+    symbol: "INDUSINDBK",
+    asOf: "2026-06-30",
+    breakdown: {
+      whatItDoes:
+        "IndusInd Bank is a mid-sized private-sector bank with a strong position in vehicle financing (commercial vehicles, two-wheelers, tractors) and in microfinance through its Bharat Financial arm, alongside regular retail and corporate banking.",
+      financialHealth:
+        "The bank earns relatively high lending margins because vehicle and microfinance loans carry higher interest rates, but these segments also see more defaults in a downturn. Return on equity has been in the mid-teens in good years.",
+      thingsToWatch: [
+        "Vehicle finance and microfinance are more cyclical and default-prone than home loans.",
+        "It has a higher share of bulk deposits, which are less sticky than retail deposits.",
+        "Past questions around loan classification have made investors more sensitive to its reporting.",
+      ],
+    },
+    metrics: [
+      {
+        id: "marketCap",
+        label: "Market cap",
+        value: "₹1.1 lakh crore",
+        standing: "low",
+      },
+      { id: "peRatio", label: "P/E ratio", value: "10.9", standing: "low" },
+      { id: "pbRatio", label: "P/B ratio", value: "1.5", standing: "low" },
+      {
+        id: "roe",
+        label: "Return on equity",
+        value: "14.6%",
+        standing: "typical",
+      },
+      {
+        id: "dividendYield",
+        label: "Dividend yield",
+        value: "1.4%",
+        standing: "high",
+      },
+      {
+        id: "revenueGrowth",
+        label: "Net interest income growth (YoY)",
+        value: "13.8%",
+        standing: "high",
+      },
+      {
+        id: "profitMargin",
+        label: "Net profit margin",
+        value: "20.3%",
+        standing: "low",
+      },
+      {
+        id: "eps",
+        label: "Earnings per share",
+        value: "₹124.5",
+        standing: "high",
       },
     ],
   },
