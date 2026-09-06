@@ -63,17 +63,38 @@ The `GITHUB_PAGES` flag turns on `output: "export"`, `basePath: "/plainmarket"`
 and unoptimized images in `next.config.ts`; a normal build and Vercel are
 untouched.
 
+## Database (Supabase) — being set up
+
+The app still runs entirely on the `src/data/*` files. In parallel, the same
+data is being moved into a Supabase database so it can be edited without a code
+change and, later, fed by live sources.
+
+Step 1 (done) — the SQL is ready in `supabase/`:
+
+- `schema.sql` — creates the four tables (`companies`, `glossary`,
+  `fundamentals`, `news`), read-only to the public.
+- `seed.sql` — loads every current fixture row. Regenerate it after any change
+  to `src/data/*` with `npx tsx scripts/generate-seed.ts`.
+
+To stand it up: create a free project at [supabase.com](https://supabase.com),
+open **SQL Editor**, run `schema.sql`, then run `seed.sql`. Put the project URL
+and anon key in `.env.local` (see `.env.example`).
+
+Step 2 (later) — point `src/lib/data-provider.ts` at the database instead of the
+files. Nothing else changes.
+
 ## Scripts
 
-| Script                 | Does                       |
-| ---------------------- | -------------------------- |
-| `npm run dev`          | Start the dev server       |
-| `npm run build`        | Production build           |
-| `npm run start`        | Serve the production build |
-| `npm run lint`         | ESLint                     |
-| `npm run typecheck`    | `tsc --noEmit`             |
-| `npm run format`       | Prettier write             |
-| `npm run format:check` | Prettier check (CI)        |
+| Script                             | Does                        |
+| ---------------------------------- | --------------------------- |
+| `npm run dev`                      | Start the dev server        |
+| `npm run build`                    | Production build            |
+| `npm run start`                    | Serve the production build  |
+| `npm run lint`                     | ESLint                      |
+| `npm run typecheck`                | `tsc --noEmit`              |
+| `npm run format`                   | Prettier write              |
+| `npm run format:check`             | Prettier check (CI)         |
+| `npx tsx scripts/generate-seed.ts` | Rebuild `supabase/seed.sql` |
 
 ## Project structure
 
